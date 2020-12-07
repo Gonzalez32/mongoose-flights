@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Destination: </div>
+    <div><%= destination.airport %></div>
+    <div>ID:</div>
+    <div><%= destination._id %> </div><br>
+    <form action="/destinations/<%= destination._id%>?_method=DELETE" class='delete-form' method="POST">
+        <button type='submit'>X</button>
+    </form>
+</section>
+
+<%- include('../partials/footer') %>

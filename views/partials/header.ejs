@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= title  %></title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="/">Home</a>
+            <a href="/destinations/new" <%- title === 'Add Destination' ? 'class="active"' : '' %>>Add Destination</a>
+            <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
+            <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
+        </ul>
+    </nav>
+</body>
+
+</html>
