@@ -5,7 +5,7 @@
     <div>Airport: <%= flight.airport %></div><br>
     <div>Flight Number: <%= flight.flightNo %></div><br>
     <div>Departure: <%= flight.departs %></div><br>
-    <div>Destination: <%- flight.destination.map((d) => `<li> ${d.destination} </li>` ) %></div><br>
+    <div>Destination: <%- flight.destination.map((d) => `<li> ${d.destination} </li>` ).join('') %></div><br>
         <form id="add-destination-to-airport" action="/flights/<%= flight._id %>/destinations" method="POST">
             <select name="destination">
                 <%- destinations.map((d) => `<option value="${d._id}">${d.destination}</option>`) %>
