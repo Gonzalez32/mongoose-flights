@@ -9,6 +9,16 @@
             <option value="United">United</option>
             <option value="AeroMexico">AeroMexico</option>
             <option value="Ryanair">Ryanair</option>
+          </select>
+      </label><br><br>
+    <label>Airport:
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="MID">MID</option>
+            <option value="WAY">WAY</option>
         </select>
     </label><br><br>
     <label>Flight Number:
@@ -19,6 +29,5 @@
     </label><br><br>
     <input type="submit" value='Add Flight' class='submitBtn'>
 </form>
-<h1><%= err %></h1>
 
 <%- include('../partials/footer') %>

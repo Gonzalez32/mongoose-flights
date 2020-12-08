@@ -1,24 +1,17 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <div>Airline: </div>
-    <div><%= flight.airline %></div>
-    <div>Airport: </div><br>
-    <%- flight.airport.map(d => 
-        `${d.airport}`
-      ) %>
-    <form id="add-destination-to-airport" action="/flights/<%= flight._id %>/destinations" method="POST">
-        <select name="destinationId">
-            <%- destinations.map(d => 
-          `<option value="${d._id}">${d.airport}</option>`
-        ) %>
-        </select>
-        <button type="submit">Add Destination</button>
-    </form><br>
-    <div>Flight Number: </div>
-    <div><%= flight.flightNo %></div>
-    <div>Departure: </div>
-    <div><%= flight.departs %></div>
+    <div>Airline: <%= flight.airline %> </div><br>
+    <div>Airport: <%= flight.airport %></div><br>
+    <div>Flight Number: <%= flight.flightNo %></div><br>
+    <div>Departure: <%= flight.departs %></div><br>
+    <div>Destination: <%- flight.destination.map((d) => `<li> ${d.destination} </li>` ) %></div><br>
+        <form id="add-destination-to-airport" action="/flights/<%= flight._id %>/destinations" method="POST">
+            <select name="destination">
+                <%- destinations.map((d) => `<option value="${d._id}">${d.destination}</option>`) %>
+            </select>
+            <button type="submit">Add Destination</button>
+        </form><br>
 </section>
 <br><br>
 <h2>Tickets</h2>

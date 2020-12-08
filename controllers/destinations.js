@@ -4,7 +4,7 @@ module.exports = {
     new: newDestination,
     create,
     show,
-    deleteDestination,
+    deleteDestination
 }
 
 function newDestination(req, res) {
@@ -13,6 +13,7 @@ function newDestination(req, res) {
     })
 }
 function create(req, res) {
+    // console.log(req.body);
     Destination.create(req.body, (err, destinations) => {
         res.redirect('/destinations/new')
     })
@@ -25,9 +26,7 @@ function show(req, res) {
 }
 
 function deleteDestination(req, res) {
-
     Destination.findByIdAndDelete(req.params.id, (err, destinations) => {
-        console.log('Errors')
         res.redirect('/destinations/new')
     })
 }

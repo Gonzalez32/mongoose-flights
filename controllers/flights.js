@@ -8,7 +8,7 @@ module.exports = {
     index,
     show,
     delete: deleteFlight,
-    addToDestinations,
+    addDestinations
 }
 
 function newFlight(req, res) {
@@ -34,8 +34,8 @@ function index(req, res) {
 
 function show(req, res) {
     Flight.findById(req.params.id)
-        .populate('airport').exec( (err, flight) => {
-            Destination.find({ _id: { $nin: flight.airport } },
+        .populate('destination').exec( (err, flight) => {
+            Destination.find({ _id: { $nin: flight.destinations } },
                 (err, destinations) => {
                     res.render('flights/show', { title: 'Flight Details', flight, destinations })
                 })
@@ -48,11 +48,11 @@ function deleteFlight(req, res) {
     })
 }
 
-function addToDestinations(req, res) {
-    Flight.findByIdAndDelete(req.params.id, (err, flight) => {
-        flight.airport.push(req.body.destinationId)
+function addDestinations(req, res) {
+    Flight.findById(req.params.id, (err, flight) => {
+        flight.destination.push(req.body.destination)
         flight.save((err) => {
-            res.redirect(`/flights/${flight.id}`)
+            res.redirect(`/flights/${flight._id}`)
         }) 
     })
 }
