@@ -13,7 +13,9 @@ const flightSchema = new Schema({
     airport:{type: String, enum:['AUS', 'DFW', 'DEN', 'LAX', 'MID', 'WAY'], default:'DEN'},
     flightNo: { type: Number, required: true, min: 10, max: 9999 },
     departs: { type: Date, default: () => Date.now() + 365 * 24 * 60 * 60 * 1000 },
+    // Added ticketSchema 
     tickets: [ticketSchema],
+    // Added destination
     destination: [{type: Schema.Types.ObjectId, ref: 'Destination'}]
 }, {
     timestamps: true
