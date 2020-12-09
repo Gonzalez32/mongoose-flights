@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
-<%- include('../partials/nav') %> 
+<%- include('../partials/nav') %>
 
-<table id="table-content">
+<table id="table-content" class="table table-striped table-dark"><br>
     <thead>
         <tr>
             <th>Airline</th>
@@ -31,5 +31,13 @@
         <% }); %>
     </tbody>
 </table>
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, User!</h1>
+    <p class="lead">Please add destination then add flight, all flights will render to page.</p>
+    <hr class="my-4">
+    <p>Bootstrap is amazing & fun to use.</p>
+    <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" role="button">Learn more</a>
+</div>
 
 <%- include('../partials/footer') %>

@@ -1,15 +1,16 @@
 <%- include('../partials/header') %>
 <%- include('../partials/nav') %> 
 
-<section id="show-page">
-    <div>Destination: </div>
-    <div><%= destination.destination %></div>
-    <div>ID:</div>
-    <div><%= destination._id %> </div><br>
-    <form action="/destinations/<%= destination._id%>?_method=DELETE" class='delete-form' method="POST">
-        <h6>Delete Destination</h6>
-        <button type='submit' class="btn btn-outline-danger btn-sm">X</button>
-    </form>
-</section>
+<div id="displayShow">
+    <br><section id="show-page">
+        <div>Destination: <%= destination.destination %></div><br>
+        <div>Destination ID: <%= destination._id %></div><br>
+        <form action="/destinations/<%= destination._id%>?_method=DELETE" class='delete-form' method="POST">
+            <h6>Delete Destination
+                <button type='submit' class="btn btn-outline-danger btn-sm">X</button>
+            </h6>
+        </form>
+    </section>
+</div>
 
 <%- include('../partials/footer') %>

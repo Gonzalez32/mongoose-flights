@@ -6,3 +6,35 @@ body {
 a {
   color: #00B7FF;
 }
+
+#indexInfo {
+  text-align: center;
+}
+
+#displayNew {
+  text-align: center;
+}
+
+#displayShow {
+  text-align: center;
+}
+
+#flightsNew {
+  text-align: center;
+}
+
+#flightsShow {
+  text-align: center;
+}
+
+#ticketTable {
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

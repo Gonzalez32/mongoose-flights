@@ -1,8 +1,14 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <ul>
-        <a href="/">Home</a>
-        <a href="/destinations/new" <%- title === 'Add Destination' ? 'class="active"' : '' %>>Add Destination</a>
-        <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
-        <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
-    </ul>
-</nav>
+<nav class="navbar fixed-top navbar-dark bg-dark" >
+    <a class="navbar-brand" href="/">
+        <img id="icon" src="https://i.pinimg.com/originals/53/4a/e3/534ae3108b6feafc1e9126deb7ca3b8e.gif" alt="airplane" width="50" height="50" loading="lazy">
+        Mongoose Airline Flights
+    </a>
+
+    <div class="btn-group">
+        <a class="btn btn-outline-info" href="/destinations/new" <%- title === 'Add Destination' ? 'class="nav-link active"' : '' %>>Destination</a>
+        <a class="btn btn-outline-info" href="/flights/new" <%- title === 'Add Flight' ? 'class="nav-link"' : '' %>>Flight</a>
+        <a class="btn btn-outline-info" href="/flights" <%- title === 'All Flights' ? 'class="nav-link"' : '' %>>All Flights</a>
+    </div>
+    
+
+</nav><br><br>
