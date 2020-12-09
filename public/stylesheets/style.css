@@ -1,3 +1,7 @@
+:root {
+  --pic: url("https://drawingdatabase.com/wp-content/uploads/2014/04/Airbus-A380.gif");
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -9,6 +13,9 @@ a {
 
 #indexInfo {
   text-align: center;
+  background-image: var(--pic);
+  height: 100vh;
+
 }
 
 #displayNew {
