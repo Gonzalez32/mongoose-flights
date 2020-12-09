@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <%- include('../partials/nav') %> 
 
-<table>
+<table id="table-content">
     <thead>
         <tr>
             <th>Airline</th>
@@ -9,7 +9,7 @@
             <th>Flight Number</th>
             <th>Departure</th>
             <th>Details</th>
-            <th>Delete Flight</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -21,9 +21,11 @@
             <td><%= f.departs  %> </td>
             <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
             <td>
-                <form action="flights/<%= f._id %>?_method=DELETE" class="delete-form" method="POST">
-                    <button type="submit">X</button>
-                </form>
+                <div>
+                    <form action="flights/<%= f._id %>?_method=DELETE" class="delete-form" method="POST">
+                        <button type="submit" class="btn btn-outline-danger btn-sm" >X</button>
+                    </form>
+                </div>
             </td>
         </tr>
         <% }); %>

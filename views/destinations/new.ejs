@@ -4,15 +4,15 @@
 <p>Please first ensure that the Destination is not in the dropdown:</p>
 <select>
     <% destinations.forEach(function(d) { %>
+        <option><%= d.destination %></option>
         <%= destinations %> 
-    <option><%= d.destination %></option>
     <% }) %>
 </select>
 </p>
 <form id="add-destination-form" action="/destinations" method="POST">
     <label>Destination:</label>
     <input type="text" name="destination" oninput="this.value = this.value.toUpperCase()" maxlength="3">
-    <input type="submit" value="Add Destination" class='AD'>
+    <input type="submit" value="Add Destination" class="btn btn-outline-warning">
 </form>
 <tbody>
     <h4>Destinations:</h4>
@@ -22,7 +22,7 @@
         <td><a href="/destinations/<%= d._id %>" class='link'>DETAILS</a></td>
         <td>
             <form action="/destinations/<%= d._id%>?_method=DELETE" class='delete-form' method="POST">
-                <button type='submit'>X</button>
+                <button type='submit' class="btn btn-outline-danger btn-sm">X</button>
             </form>
         </td>
         <% }) %>

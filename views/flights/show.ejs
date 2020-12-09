@@ -11,7 +11,7 @@
             <select name="destination">
                 <%- destinations.map((d) => `<option value="${d._id}">${d.destination}</option>`) %>
             </select>
-            <button type="submit">Add Destination</button>
+            <button type="submit" class="btn btn-outline-warning">Add Destination</button>
         </form><br>
 </section>
 <br><br>
@@ -22,7 +22,7 @@
         placeholder="A1 - F99" maxlength="3">
     <label>Price:</label>
     <input type="text" name='price' placeholder="$">
-    <input type="submit" value="Add Ticket" class='submitBtn'>
+    <input type="submit" value="Add Ticket"  class="btn btn-outline-success">
 </form>
 
 <% if (flight.tickets.length) { %>
@@ -42,13 +42,13 @@
             <td>$<%= t.price %></td>
             <td>
                 <form action="/<%= t._id %>/<%= flight._id%>?_method=DELETE" class='delete-form' method="POST">
-                    <button type='submit'>X</button>
+                    <button type="submit" class="btn btn-outline-danger btn-sm">X</button>
                 </form>
             </td>
         </tr>
         <% }); %>
     </tbody>
-</table>
+</table><br>
 <% } else { %>
 <h5>No Tickets Yet</h5>
 <% } %>
