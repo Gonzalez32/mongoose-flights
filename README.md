@@ -1,2 +1,3 @@
 # mongoose-flights
-[link](https://mongoose-flights-cg.herokuapp.com/)
+
+Click here for the [link](https://mongoose-flights-cg.herokuapp.com/)
