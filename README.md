@@ -7,4 +7,7 @@ Click here for the [link](https://mongoose-flights-cg.herokuapp.com/)
 ![](https://imgur.com/a/RhHn3mz)
 
 # C.R.U.D. Project - Mongoose Airline Flights
-Create, Read, Update, Delete.
+* Create, 
+* Read, 
+* Update, 
+* Delete.
